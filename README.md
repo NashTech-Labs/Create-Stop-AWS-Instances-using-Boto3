@@ -1,26 +1,15 @@
-# Using Boto3 on AWS display the Buckets list
+# Create and Stop Instances on AWS using Boto3
 
+---
 
 ## Short Description 
 
-This template will you the flavour of boto3 where you will find how to get the names or list of buckets and EC2 instances without using UI of AWS. 
+This template will you the flavour of boto3 where you will be able to create and stop the instances using boto3 without using UI of AWS.
 
-## Getting Started with Installation
-
-* Install python
-* Install pip
-
+---
 ### Commands 
 
-`sudo apt-get update`
-
-`sudo apt-get install python3 -y`
-
-`sudo apt-get install ansible -y`
-
-`sudo apt-get -y install python3-pip`
-
-`pip3 --version`
+`python3 filename.py`
 
 #### Note : To configure AWS IAM User
 
@@ -28,38 +17,26 @@ This template will you the flavour of boto3 where you will find how to get the n
 
 Then configure using , `aws configure`
 
-<img alt="s4.png" height="80" src="assests/s4.png" title="AWS configuration" width="400"/>
+<img alt="aws-config.png" height="80" src="assests/aws-config.png" title="AWS configuration" width="400"/>
 
 Find you AWS Access KEY and Secret in your AWS account 
 
+---
 ### Steps to Kick Start
 
-First , create an Instance on AWS
+First , create an Instance using boto3, before the instance present 
 
-<img alt="s1.png" height="100" src="assests/s1.png" title="AWS Instance Created" width="500"/>
+`create-instance-boto3.py`
 
-Create some S3 bucket 
+<img alt="before.png" height="100" src="assests/before.png" title="AWS Instance List before Instance" width="500"/>
 
-<img alt="s2.png" height="200" src="assests/s2.png" title="S3 bucket Created" width="500"/>
+Instance is created using Boto3,
 
-Name the bucket 
+<img alt="instance-up.png" height="200" src="assests/instance-up.png" title="S3 bucket Created" width="500"/>
 
-<img alt="s3.png" height="200" src="assests/s3.png" title="Naming S3 buckets" width="500"/>
+`stop-instance-boto3.py`
 
-Run the *file.py* file using the command
+List after the Instance is Stop file called,
 
-`python3 file.py`
-
-It will provide you with the list of buckets.
-
-`listing_EC2_Instances`
-
-It will provide you with the list of EC2 instances.
-
-#### OUTPUT
-
-<img alt="s3.png" height="80" src="assests/s5.png" title="Display all buckets" width="500"/>
-
-
-<img alt="s5.png" height="200" src="assests/instance check boto3.png" title="Display all buckets" width="500"/>
+<img alt="s3.png" height="200" src="assests/stop-instance.png" title="Naming S3 buckets" width="500"/>
 
